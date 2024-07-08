@@ -15,6 +15,7 @@ void main() {
       ChangeNotifierProvider.value(value: VideoProvider()),
     ],
     child: MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: darkTheme,
       // themeMode: ThemeMode.dark,
       routes: app_routes,

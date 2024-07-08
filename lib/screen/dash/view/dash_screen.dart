@@ -34,7 +34,7 @@ class _DashScreenState extends State<DashScreen> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        title: const Text("Media_Bossterß"),
+        title: const Text("Media_Bosster"),
       ),
       body: Column(
         children: [
@@ -67,6 +67,7 @@ class _DashScreenState extends State<DashScreen> {
             controller: pageController,
             count: imageCarsoul.length,
           ),
+          SizedBox(height: 10,),
           Expanded(
             child: GridView.builder(
               itemCount: mproviderW!.imageAlbum.length,

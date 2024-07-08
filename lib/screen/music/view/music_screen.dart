@@ -28,7 +28,9 @@ class _MusicScreenState extends State<MusicScreen> {
     providerR = context.read<MusicProvider>();
     providerW = context.watch<MusicProvider>();
     return Scaffold(
-      // appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("Music"),
+      ),
       body: Stack(
         // alignment: Alignment.center,
         children: [
@@ -101,12 +103,14 @@ class _MusicScreenState extends State<MusicScreen> {
                     boxShadow: const [
                       BoxShadow(blurRadius: 10, spreadRadius: -5)
                     ],
-                    borderRadius: const BorderRadius.all(Radius.circular(8)),
+                    borderRadius:  BorderRadius.all(Radius.circular(8)),
                     image: DecorationImage(
                         image: NetworkImage(
                             "${providerW!.allList[context.read<MusicProvider>().aIndex][providerW!.index].image}"))),
               ),
-              const Spacer(),
+              SizedBox(height: 10,),
+              Center(child: Text("${providerW!.allList[context.read<MusicProvider>().aIndex][providerW!.index].title}",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),)),
+               Spacer(),
               Slider(
                 value: providerW!.currentDuration.inSeconds.toDouble(),
                 max: providerW!.endDuration.inSeconds.toDouble(),
@@ -146,7 +150,7 @@ class _MusicScreenState extends State<MusicScreen> {
                         await providerW!.assetsAudio.previous();
                         providerR!.endDurationSong();
                         providerW!.previousIndex(providerW!.index);
-                        providerW!.isPlay = false;
+                        providerW!.isPlay = true;
                       },
                       icon: const Icon(
                         Icons.skip_previous,
@@ -162,12 +166,12 @@ class _MusicScreenState extends State<MusicScreen> {
                       },
                       icon: providerW!.isPlay
                           ? const Icon(
-                              Icons.play_arrow,
+                              Icons.pause,
                               color: Colors.deepPurple,
                               size: 50,
                             )
                           : const Icon(
-                              Icons.pause,
+                              Icons.play_arrow,
                               color: Colors.deepPurple,
                               size: 50,
                             )),
@@ -176,7 +180,7 @@ class _MusicScreenState extends State<MusicScreen> {
                         await providerW!.assetsAudio.next();
                         providerR!.endDurationSong();
                         providerW!.nextIndex(providerW!.index);
-                        providerW!.isPlay = false;
+                        providerW!.isPlay = true;
                       },
                       icon: const Icon(
                         Icons.skip_next,

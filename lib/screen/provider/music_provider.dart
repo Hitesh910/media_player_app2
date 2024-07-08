@@ -191,13 +191,14 @@ class MusicProvider with ChangeNotifier {
   }
 
   void plyAndPause() {
-    isPlay = !isPlay;
 
     if (isPlay) {
       assetsAudio.pause();
     } else {
       assetsAudio.play();
     }
+    isPlay = !isPlay;
+
     notifyListeners();
   }
 
