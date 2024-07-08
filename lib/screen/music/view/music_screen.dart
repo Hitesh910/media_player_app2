@@ -39,28 +39,35 @@ class _MusicScreenState extends State<MusicScreen> {
           //   padding: EdgeInsets.only(top: 0,bottom: 80),
           //   color: Colors.black12.withOpacity(0.1),
           //   child:
-            Container(
-              height: MediaQuery.sizeOf(context).height,
-              width: MediaQuery.sizeOf(context).width,
-              decoration:  BoxDecoration(
-                image: DecorationImage(
-                    image: NetworkImage(
-                        "${providerW!.allList[context.read<MusicProvider>().aIndex][providerW!.index].image}",),fit: BoxFit.fitHeight),
-                // gradient: LinearGradient(
-                //   tileMode: TileMode.mirror,
-                //   begin: Alignment.topLeft,
-                //   end: Alignment.bottomRight,
-                //   colors: [Color(0xff605C3C), Color(0xff3C3B3F)],
-                // ),
-              ),
-              child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
-                child: Container(
-                  decoration: BoxDecoration(color: Colors.black.withOpacity(0.3)),
-                ),
+          IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(Icons.arrow_drop_down_outlined)),
+          Container(
+            height: MediaQuery.sizeOf(context).height,
+            width: MediaQuery.sizeOf(context).width,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: NetworkImage(
+                    "${providerW!.allList[context.read<MusicProvider>().aIndex][providerW!.index].image}",
+                  ),
+                  fit: BoxFit.fitHeight),
+              // gradient: LinearGradient(
+              //   tileMode: TileMode.mirror,
+              //   begin: Alignment.topLeft,
+              //   end: Alignment.bottomRight,
+              //   colors: [Color(0xff605C3C), Color(0xff3C3B3F)],
+              // ),
+            ),
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
+              child: Container(
+                decoration: BoxDecoration(color: Colors.black.withOpacity(0.3)),
               ),
             ),
-         // ),
+          ),
+          // ),
           // Container(
           //   height: MediaQuery.sizeOf(context).height,
           //   width: MediaQuery.sizeOf(context).width,
@@ -110,18 +117,19 @@ class _MusicScreenState extends State<MusicScreen> {
               Padding(
                 padding: const EdgeInsets.only(left: 12, bottom: 5, right: 12),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "${providerW!.currentDuration}",
-                      style: const TextStyle(color: Colors.white,),
-                    ),
-                    Text(
-                      "${providerW!.endDuration}",
-                      style: const TextStyle(color: Colors.white),
-                    )
-                  ]
-                ),
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "${providerW!.currentDuration}",
+                        style: const TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        "${providerW!.endDuration}",
+                        style: const TextStyle(color: Colors.white),
+                      )
+                    ]),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

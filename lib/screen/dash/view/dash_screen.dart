@@ -67,27 +67,6 @@ class _DashScreenState extends State<DashScreen> {
             controller: pageController,
             count: imageCarsoul.length,
           ),
-          IconButton(
-              onPressed: () {
-                // assetsAudio.open(Audio("assets/audio/audio1.mp3"));
-                // // assetsAudio.
-                // providerW!.songRun(true);
-                // providerW!.choice == true
-                //      assetsAudio.play();
-                //     : providerR!.assetsAudio.stop();
-                // print(providerW!.choice);
-              },
-              icon:
-                  // providerW!.choice == false
-                  //     ?
-                  const Icon(Icons.play_arrow)
-              // : Icon(Icons.stop)
-              ),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, 'music');
-              },
-              child: const Text("Music")),
           Expanded(
             child: GridView.builder(
               itemCount: mproviderW!.imageAlbum.length,
