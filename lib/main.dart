@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:media_bosster_app/screen/componet/network/provider/internet_provider.dart';
 import 'package:media_bosster_app/screen/home/provider/home_provider.dart';
 import 'package:media_bosster_app/screen/provider/music_provider.dart';
 import 'package:media_bosster_app/screen/video/provider/video_provider.dart';
@@ -13,6 +14,7 @@ void main() {
       ChangeNotifierProvider.value(value: HomeProvider()),
       ChangeNotifierProvider.value(value: MusicProvider()),
       ChangeNotifierProvider.value(value: VideoProvider()),
+      ChangeNotifierProvider.value(value: InternetProvider()..checkInternet()),
     ],
     child: MaterialApp(
       debugShowCheckedModeBanner: false,

@@ -1,10 +1,12 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
+import 'package:media_bosster_app/screen/componet/network/view/internet_widget.dart';
 import 'package:media_bosster_app/screen/dash/view/dash_screen.dart';
 import 'package:media_bosster_app/screen/home/model/home_model.dart';
 import 'package:media_bosster_app/screen/provider/music_provider.dart';
 import 'package:media_bosster_app/screen/video/view/video_screen.dart';
 import 'package:provider/provider.dart';
+import '../../componet/network/provider/internet_provider.dart';
 import '../provider/home_provider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -41,13 +43,15 @@ class _HomeScreenState extends State<HomeScreen> {
       // appBar: AppBar(
       //   title: Text("Media Bosster"),
       // ),
-      body: Column(
-        children: [
-          providerW!.selectIndex == 0
-              ? Expanded(child: DashScreen())
-              : Expanded(child: VideoScreen())
-        ],
-      ),
+      body: context.watch<InternetProvider>().isInternet
+          ? InternetWidget()
+          : Column(
+              children: [
+                providerW!.selectIndex == 0
+                    ? Expanded(child: DashScreen())
+                    : Expanded(child: VideoScreen())
+              ],
+            ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: providerW!.selectIndex,
         onTap: (value) {
@@ -56,7 +60,6 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.music_note), label: "Music"),
-
           BottomNavigationBarItem(
               icon: Icon(Icons.video_camera_back_rounded), label: "Video"),
         ],
