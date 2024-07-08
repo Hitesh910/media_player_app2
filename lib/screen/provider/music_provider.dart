@@ -19,7 +19,7 @@ class MusicProvider with ChangeNotifier {
     "https://c.saavncdn.com/editorial/PopMeinTop_20240701103058_150x150.jpg",
     "https://c.saavncdn.com/505/Husn-Irani-From-Wild-Wild-Punjab-Hindi-2024-20240627151003-150x150.jpg",
     "https://c.saavncdn.com/editorial/Hindi-IndiaSuperhitsTop50_20240705025241_150x150.jpg",
-    "https://m.media-amazon.com/images/I/81yLdtaqhpL._UF1000,1000_QL80_.jpg",
+      "https://m.media-amazon.com/images/I/81yLdtaqhpL._UF1000,1000_QL80_.jpg",
   ];
 
   List<List<MusicModel>> allList = [

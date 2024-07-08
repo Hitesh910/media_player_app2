@@ -44,14 +44,14 @@ class _HomeScreenState extends State<HomeScreen> {
       //   title: Text("Media Bosster"),
       // ),
       body: context.watch<InternetProvider>().isInternet
-          ? InternetWidget()
-          : Column(
+          ? Column(
               children: [
                 providerW!.selectIndex == 0
                     ? Expanded(child: DashScreen())
                     : Expanded(child: VideoScreen())
               ],
-            ),
+            )
+      :InternetWidget(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: providerW!.selectIndex,
         onTap: (value) {
