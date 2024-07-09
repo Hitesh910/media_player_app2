@@ -1,16 +1,10 @@
-# media_bosster_app
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p>
+  <img src ="https://github.com/Hitesh910/media_player_app2/assets/154861495/c5fbe0c9-8a36-432a-a3de-38bbc586d1f5"height="800"width="400"/>
+  <img src = "https://github.com/Hitesh910/media_player_app2/assets/154861495/8eced3f2-88bc-4b46-a926-4539f0d45cf2"height="800"width="400"/>
+  <img src = "https://github.com/Hitesh910/media_player_app2/assets/154861495/4219ee14-4648-40aa-a706-5f885832846a"height="800"width="400"/>
+  <img src = "https://github.com/Hitesh910/media_player_app2/assets/154861495/61e73a53-fb09-43b9-bf42-67f2a3766316"height="800"width="400"/>
+  <img src = "https://github.com/Hitesh910/media_player_app2/assets/154861495/4b0c9954-b770-43af-b003-8db8cf74c78e"height="800"width="400"/>
+  <img src = "https://github.com/Hitesh910/media_player_app2/assets/154861495/b626dee5-69f8-4604-8494-478ab09ca9dc"height="800"width="400"/>
+  <img src = "https://github.com/Hitesh910/media_player_app2/assets/154861495/7d8c9b19-4930-4156-b08a-61dc00002634"height="800"width="400"/>
+  <img src = "https://github.com/Hitesh910/media_player_app2/assets/154861495/59886781-2440-4dc2-b381-968619d2678a"height="800"width="400"/>
+</p>
