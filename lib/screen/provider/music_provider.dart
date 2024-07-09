@@ -184,10 +184,11 @@ class MusicProvider with ChangeNotifier {
             startIndex: index,
             audios: allList[aIndex].map((e) => Audio.network(e.song!)).toList()),
         loopMode: LoopMode.playlist,
-        autoStart: false);
+        autoStart: false,showNotification: true);
     endDurationSong();
     currentDurationSong();
     print(aIndex);
+
   }
 
   void plyAndPause() {
@@ -239,7 +240,7 @@ class MusicProvider with ChangeNotifier {
   }
 
   void previousIndex(int value) {
-    if (index > allList[aIndex].length + 1) {
+    if (index > 0) {
       index--;
     } else {
       index = 0;

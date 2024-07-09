@@ -18,22 +18,22 @@ class _VideoScreenState extends State<VideoScreen> {
   // VideoPlayerController? videoPlayer;
   ChewieController? chewieController;
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    // videoPlayer = VideoPlayerController.networkUrl(Uri.parse('https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'));
-    // videoPlayer!.initialize();
-    // providerR!.initVideo();
-    context.read<VideoProvider>().init();
-  }
+   @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  //   // videoPlayer = VideoPlayerController.networkUrl(Uri.parse('https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'));
+  //   // videoPlayer!.initialize();
+  //   // providerR!.initVideo();
+  //   context.read<VideoProvider>().init();
+  // }
 
   @override
   Widget build(BuildContext context) {
     providerR = context.read<VideoProvider>();
     providerW = context.watch<VideoProvider>();
     return Scaffold(
-      appBar: AppBar(title: Text("Media_bosster"),),
+      appBar: AppBar(title: Text("Media_Bosster"),),
         body: Column(
       children: [
         Expanded(
@@ -47,6 +47,7 @@ class _VideoScreenState extends State<VideoScreen> {
                     title: Text("${providerW!.allVideo[index].title}"),
                    onTap: () {
                       providerW!.selectIndex(index);
+                      Navigator.pushNamed(context, 'videoLoad');
                    },
                   ),
                   Divider(),
